@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title>
+    <link rel="stylesheet" href="body.css">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+    </div>
+
+    <div class="game-container">
+        <h1>Tic Tac Toe</h1>
+
+        <div class="controls">
+            <div class="mode-selector">
+                <button class="btn active" id="pvp-mode">Player vs Player</button>  
+                <button class="btn" id="pvc-mode">Player vs CPU</button>
+            </div>
+
+            <div class="symbol-selector">
+                <span style="color: white">Choose Symbol: </span>
+                <button class="btn active" id="choose-x">X</button>
+                <button class="btn" id="choose-o">O</button>
+            </div>
+
+            <div class="difficulty-selector" id="difficulty-selector" style="display: none;">
+                <button class="btn active" id="easy-mode">Easy</button>
+                <button class="btn" id="medium-mode">Medium</button>
+                <button class="btn" id="hard-mode">Hard</button>
+            </div>
+        </div>
+
+        <div class="player-names">
+            <input type="text" class="name-input" id="player1-name" placeholder="Player 1 Name">
+            <input type="text" class="name-input" id="player2-name" placeholder="Player 2 Name">
+        </div>
+
+        <div class="game-info">
+            <div class="score-board">
+                <div class="score-item">
+                    <div id="player-1-display">Player 1</div>
+                    <div class="stat-value" id="player1-score">0</div>
+                </div>
+                <div class="score-item">
+                    <div id="player2-display">Player 2</div>
+                    <div class="stat-value" id="player2-score">0</div>
+                </div>
+            </div>
+            <div class="current-player" id="current-player">Player 1's Turn</div>
+        </div>
+
+        <div class="game-board" id="game-board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <div class="game-status" id="game-status"></div>
+
+        <div class="game-actions">
+            <button class="btn" id="reset-game">Reset Game</button>
+            <button class="btn" id="new-match">New Match</button>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div>Games Played</div>
+                <div class="stat-value" id="games-played">0</div>
+            </div>
+            <div class="stat-item">
+                <div>Win Rate</div>
+                <div class="stat-value" id="win-rate">0%</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="particles" id="particles"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
